@@ -47,33 +47,43 @@ public class Main {
 //        user.setPassword("macmac");
 //        user.setEmail("bogdan.2.savianu@gmail.com");
 //        user.setPlaylists(null);
-        UserService userService = ServiceSinglePointAccess.getUserService();
-//        User savedUser = userService.save(user);
-//        userService.deleteByID(2);
-//        userService.deleteByID(3);
-//        userService.deleteByID(4);
-//        userService.deleteByID(5);
-        PlaylistService playlistService = ServiceSinglePointAccess.getPlaylistService();
-//        playlistService.deleteByID(6);
-//        User savedUser = userService.save(user);
-//        userService.addPlaylistToUser(7,"Rock");
-        SongService songService = ServiceSinglePointAccess.getSongService();
-        AlbumService albumService = ServiceSinglePointAccess.getAlbumService();
-        ArtistService artistService = ServiceSinglePointAccess.getArtistService();
-//        Artist artist = new Artist();
-//        artist.setName("The Offspring");
-        Song song = new Song();
-        song.setName("The Unforgiven II");
-        song.setDuration(396);
-        songService.save(song);
-        Album album = new Album();
-        album.setName("Reload");
-        album.addSong(song);
-        song.setAlbum(album);
-        artistService.addAlbumToArtist("Metallica",album);
-        artistService.addSongToArtist("Metallica",song);
 
-        playlistService.addSongToPlaylist(13,song);
+
+
+        //TODO de aici
+
+//        UserService userService = ServiceSinglePointAccess.getUserService();
+////        User savedUser = userService.save(user);
+////        userService.deleteByID(2);
+////        userService.deleteByID(3);
+////        userService.deleteByID(4);
+////        userService.deleteByID(5);
+//        PlaylistService playlistService = ServiceSinglePointAccess.getPlaylistService();
+////        playlistService.deleteByID(6);
+////        User savedUser = userService.save(user);
+////        userService.addPlaylistToUser(7,"Rock");
+        SongService songService = ServiceSinglePointAccess.getSongService();
+        songService.findAll();
+//        AlbumService albumService = ServiceSinglePointAccess.getAlbumService();
+//        ArtistService artistService = ServiceSinglePointAccess.getArtistService();
+////        Artist artist = new Artist();
+////        artist.setName("The Offspring");
+//        Song song = new Song();
+//        song.setName("The Unforgiven II");
+//        song.setDuration(396);
+//        songService.save(song);
+//        Album album = new Album();
+//        album.setName("Reload");
+//        album.addSong(song);
+//        song.setAlbum(album);
+//        artistService.addAlbumToArtist("Metallica",album);
+//        artistService.addSongToArtist("Metallica",song);
+//
+//        playlistService.addSongToPlaylist(13,song);
+
+
+        //TODO pana aici
+
 //        User user = new User();
 //        user.setName("Test");
 //        user.setPassword("1234");
