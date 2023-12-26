@@ -31,12 +31,12 @@ public class Album {
     @ToString.Exclude
     private Artist author;
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
-    @ToString.Exclude
-    private List<Song> songs = new ArrayList<>();
+//    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
+//    @ToString.Exclude
+//    private List<Song> songs = new ArrayList<>();
 
     public void addSong(Song song){
         song.setAlbum(this);
-        songs.add(song);
+        //songs.add(song);
     }
 }

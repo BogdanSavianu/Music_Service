@@ -44,7 +44,24 @@ public class SongRepositoryImpl implements SongRepository {
 
     @Override
     public Song findById(Integer id) {
-        return null;
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        TypedQuery<Song> query = session.getNamedQuery("findSongById");
+        query.setParameter("id", id);
+
+        Song song;
+        try {
+            song = (Song) query.getSingleResult();
+        } catch (NoResultException e) {
+            song = null;
+        }
+
+        transaction.commit();
+        session.close();
+
+        return song;
     }
 
 

@@ -16,7 +16,7 @@ import java.io.Serializable;
         {
                 @NamedQuery(name = "findSongByName", query = "from Song song where song.name = :name"),
                 @NamedQuery(name = "findSongById", query = "from Song song where song.id = :id"),
-                @NamedQuery(name = "findAllSongs", query = "from Song")
+                @NamedQuery(name = "findAllSongs", query = "from Song ")
         }
 )
 public class Song implements Serializable {
@@ -30,11 +30,11 @@ public class Song implements Serializable {
     @Column
     private Integer duration;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @ToString.Exclude
     private Artist author;
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @ToString.Exclude
     private Album album;
 }

@@ -1,0 +1,160 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BogdanSavianu/Music_Service.git"
+  },
+  "private": true,
+  "item": [
+    {
+      "name": "http://localhost:8080/song/all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/song/all"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song/id/1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/song/id/1"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song/create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Dream On\",\r\n   \"duration\": 420,\r\n   \"author\":{ \"id\": 4,\r\n    \"name\": \"New_artist\"\r\n},    \"album\":{ \"id\": ,\r\n    \"name\": \"New_name\" \r\n} \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/song/create"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song//updateName/1/New_Name",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": "http://localhost:8080/song//updateName/1/New_Name"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song/update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\":1,\r\n  \"name\": \"New_name\",\n   \"duration\": 420,\n   \"author\":{ \"id\": 4,\n    \"name\": \"New_artist\"\n},    \"album\":{ \"id\": ,\n    \"name\": \"New_name\" \n} \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/song/update"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song/details_all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/song/details_all"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/song/delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "1",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/song/delete"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/csv/import_user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "users_import.csv",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/csv/import_user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/csv/export_user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "users_export.csv",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/csv/export_user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/performance/java_logic",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/performance/java_logic"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/performance/sql_logic",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/performance/sql_logic"
+      },
+      "response": []
+    }
+    ]
+}
