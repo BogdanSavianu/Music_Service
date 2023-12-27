@@ -62,8 +62,7 @@ public class Main {
 ////        playlistService.deleteByID(6);
 ////        User savedUser = userService.save(user);
 ////        userService.addPlaylistToUser(7,"Rock");
-        SongService songService = ServiceSinglePointAccess.getSongService();
-        songService.findAll();
+
 //        AlbumService albumService = ServiceSinglePointAccess.getAlbumService();
 //        ArtistService artistService = ServiceSinglePointAccess.getArtistService();
 ////        Artist artist = new Artist();
