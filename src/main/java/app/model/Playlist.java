@@ -1,5 +1,7 @@
 package app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -33,10 +35,11 @@ public class Playlist {
     @ManyToOne
     //(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name="user_id")
-    @ToString.Exclude
+    @JsonIgnore
     private User user;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ToString.Exclude
     private List<Song> songs = new ArrayList<>();
 
     public void addSong(Song song){
