@@ -64,7 +64,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"id\":1,\r\n  \"name\": \"New_name\",\n   \"duration\": 420,\n   \"author\":{ \"id\": 4,\n    \"name\": \"New_artist\"\n},    \"album\":{ \"id\": ,\n    \"name\": \"New_name\" \n} \n}",
+          "raw": "{\r\n  \"id\":1,\r\n  \"name\": \"New_name\",\n   \"duration\": 420,\n   \"author\":{ \"id\": 4,\n    \"name\": \"New_artist\"\n},    \"album\":{ \"id\": 11,\n    \"name\": \"New_name\" \n} \n}",
           "options": {
             "raw": {
               "language": "json"
