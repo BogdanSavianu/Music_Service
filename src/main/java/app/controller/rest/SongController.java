@@ -2,9 +2,7 @@ package app.controller.rest;
 
 import app.dto.SongDTO;
 import app.model.Song;
-import app.model.User;
 import app.service.SongService;
-import app.service.UserService;
 import app.single_point_access.ServiceSinglePointAccess;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
@@ -42,7 +40,7 @@ public class SongController {
     // {id} - will be taken from path - Path Variable
     // Attention - GET doesn't have a body
     @GetMapping("/id/{id}")
-    public ResponseEntity<Song> getUserById(@PathVariable Integer id) {
+    public ResponseEntity<Song> getSongById(@PathVariable Integer id) {
         return ResponseEntity.status(HttpStatus.OK).body(songService.findById(id));
     }
 
@@ -50,7 +48,7 @@ public class SongController {
     // RequestBody - is the data sent to server through request
     // For POST, PUT, DELETE we can send information both : Path Variable & RequestBody
     @PostMapping("/create")
-    public ResponseEntity<Song> createUser(@RequestBody Song song) {
+    public ResponseEntity<Song> createSong(@RequestBody Song song) {
         return ResponseEntity.status(HttpStatus.OK).body(songService.save(song));
     }
 
@@ -87,7 +85,7 @@ public class SongController {
     public ResponseEntity<List<SongDTO>> getAllSongDetails() {
 
         List<Song> songs = songService.findAll();
-        List<SongDTO> songDTOS = new ArrayList<>();
+        List<SongDTO> songsDTO = new ArrayList<>();
 
         for (Song song : songs) {
             SongDTO songDTO = new SongDTO();
@@ -96,11 +94,10 @@ public class SongController {
             songDTO.setName(song.getName());
             songDTO.setDuration(song.getDuration());
 
-            songDTOS.add(songDTO);
+            songsDTO.add(songDTO);
         }
 
-        return ResponseEntity.status(HttpStatus.OK).body(songDTOS);
+        return ResponseEntity.status(HttpStatus.OK).body(songsDTO);
     }
 
 }
-
