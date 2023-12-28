@@ -2,6 +2,7 @@ package app.single_point_access;
 
 import app.repository.*;
 import app.repository.implementation.*;
+import app.service.performance.SQLProcedurePerformanceService;
 
 public class RepositorySinglePointAccess {
 
@@ -10,6 +11,7 @@ public class RepositorySinglePointAccess {
     private static PlaylistRepository playlistRepository;
     private static ArtistRepository artistRepository;
     private static AlbumRepository albumRepository;
+
 
     static {
         userRepository = new UserRepositoryImpl();
