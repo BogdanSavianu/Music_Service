@@ -9,6 +9,8 @@ import app.repository.implementation.ArtistRepositoryImpl;
 import app.repository.implementation.SongRepositoryImpl;
 import app.service.*;
 import app.service.implementation.*;
+import app.service.performance.AppPerformanceService;
+import app.service.performance.SQLProcedurePerformanceService;
 
 public class ServiceSinglePointAccess {
 
@@ -17,6 +19,8 @@ public class ServiceSinglePointAccess {
     private static SongService songService;
     private static ArtistService artistService;
     private static AlbumService albumService;
+    private static AppPerformanceService appPerformanceService;
+    private static SQLProcedurePerformanceService sqlProcedurePerformanceService;
 
     static {
         userService = new UserServiceImpl();
@@ -24,6 +28,8 @@ public class ServiceSinglePointAccess {
         songService = new SongServiceImpl();
         artistService = new ArtistServiceImpl();
         albumService = new AlbumServiceImpl();
+        appPerformanceService = new AppPerformanceService();
+        sqlProcedurePerformanceService = new SQLProcedurePerformanceService();
     }
 
     public static UserService getUserService() {
@@ -44,5 +50,12 @@ public class ServiceSinglePointAccess {
 
     public static AlbumService getAlbumService() {
         return albumService;
+    }
+    public static AppPerformanceService getAppPerformanceService() {
+        return appPerformanceService;
+    }
+
+    public static SQLProcedurePerformanceService getSQLProcedurePerformanceService() {
+        return sqlProcedurePerformanceService;
     }
 }
