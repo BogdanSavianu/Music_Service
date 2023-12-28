@@ -199,7 +199,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "users_import.csv",
+          "raw": "user_import.csv",
           "options": {
             "raw": {
               "language": "json"
@@ -217,7 +217,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "users_export.csv",
+          "raw": "user_export.csv",
           "options": {
             "raw": {
               "language": "json"
@@ -225,6 +225,42 @@
           }
         },
         "url": "http://localhost:8080/csv/export_user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/csv/import_artist",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "artist_import.csv",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/csv/import_artist"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/csv/export_artist",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "artist_export.csv",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/csv/export_artist"
       },
       "response": []
     },
