@@ -178,7 +178,6 @@ public class CSVController {
                 String[] values = line.split(",");
 
                 if (firstLine) {
-                    // Assume the first line contains headers in order
                     firstLine = false;
                     headers = values;
                     continue;
@@ -186,7 +185,6 @@ public class CSVController {
 
                 Artist artist = new Artist();
 
-                // Dynamically map attributes based on the order in the CSV file
                 for (int i = 0; i < values.length; i++) {
                     if (i < headers.length) {
                         switch (headers[i].toLowerCase()) {
